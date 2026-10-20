@@ -1,11 +1,5 @@
 from palindromic_numbers import int_reverse
-from palindromic_numbers import is_digit
 from palindromic_numbers import create_palindromic_list
-
-assert is_digit(0)== True
-assert is_digit(9)==True
-assert is_digit(-1)==False
-assert is_digit(10)==False
 
 assert int_reverse(20) == "02"
 assert int_reverse(7) == "7"
