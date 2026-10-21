@@ -1,20 +1,19 @@
 def int_reverse(num):
-    current_num=abs(num) #local variable to apply manipulations on reverse 
-    str_num="" #target string
+    current_num=abs(num)
+    str_num=""
     if(current_num==0): 
         return "0"
     while current_num != 0:
             str_num += str(current_num % 10)
             current_num //= 10
     if num < 0:
-        str_num += "-" #add minus for negative numbers
+        str_num += "-"
     return str_num
     
 def create_palindromic_list(start, stop) :
-    result = [] #target array
-    step = 1 if stop - start >= 0 else -1 #choose loop direction
+    result = []
+    step = 1 if stop - start >= 0 else -1
     for num in range(start, stop+step, step):
-        #exclude negative numbers from the start as int_reverse should not be dependend on create_palindromic_list implementation
         if num>=0 and int(int_reverse(num))==num:
             result.append(num)
     return result
