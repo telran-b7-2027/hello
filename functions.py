@@ -18,3 +18,9 @@ def min_even (numbers):
             result = num
     return result
 
+def count(numbers, num) :
+    result = 0
+    for n in numbers:
+        if n == num:
+            result += 1
+    return result
