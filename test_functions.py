@@ -16,3 +16,6 @@ assert min_even(mock_array)==10
 assert min_even(mock_array1)==8
 assert min_even(mock_array2)==-20
 
+assert count(mock_array, 20)==2
+assert count(mock_array, 23)==0
+
