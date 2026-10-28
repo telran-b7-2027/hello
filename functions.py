@@ -10,3 +10,11 @@ def lastIndexOf(numbers, num):
         if n == num:
             result=index
     return result
+
+def min_even (numbers):
+    result: None | int = None
+    for num in numbers:
+        if num % 2 == 0 and (result is None or num < result):
+            result = num
+    return result
+
