@@ -24,3 +24,25 @@ def count(numbers, num) :
         if n == num:
             result += 1
     return result
+
+#Not optimal with what we have learned
+#O(n^2) - time
+#O(n) - space
+def sum_of_two_exists(numbers, sum):
+    seen = []
+    for num in numbers:
+        if num in seen:
+            return True
+        seen.append(sum - num)
+    return False
+
+#Optimal with set (not learned)
+#O(n) - time
+#O(n) - space
+def optimal_sum_of_two_exists(numbers, sum):
+    seen = set()
+    for num in numbers:
+        if num in seen:
+            return True
+        seen.add(sum - num)
+    return False
